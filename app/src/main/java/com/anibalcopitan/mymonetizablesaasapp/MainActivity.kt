@@ -13,6 +13,17 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.anibalcopitan.mymonetizablesaasapp.ui.theme.MyMonetizableSaaSAppTheme
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+
+        /**
+         * Here is the API SERVICE FOR LOCAL AND PRODUCTION
+         */
+        const val API_OKEYPAY: String =
+            "https://script.google.com/macros/s/AKfycbyJQISN5aPk465CNMladjW1GCZ7uklQMWDpouct_pEv8j52HGzdhB23lyTJgkzIoVL1Pg/exec"
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -22,8 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
-//                    LoginScreen()
+                    LoginScreen()
                 }
             }
         }
@@ -42,6 +52,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     MyMonetizableSaaSAppTheme {
-        Greeting("Android")
+//        Greeting("Android")
+        LoginScreen()
     }
 }
