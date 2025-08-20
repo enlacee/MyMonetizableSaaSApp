@@ -20,7 +20,7 @@ class MainActivity : ComponentActivity() {
          * Here is the API SERVICE FOR LOCAL AND PRODUCTION
          */
         const val API_OKEYPAY: String =
-            "https://script.google.com/macros/s/AKfycbyJQISN5aPk465CNMladjW1GCZ7uklQMWDpouct_pEv8j52HGzdhB23lyTJgkzIoVL1Pg/exec"
+            "https://script.google.com/macros/s/AKfycbwuzqUNuG9rD7wCkBteBJhETboxrKJ4HTlVGa68dQYfbw0vq_cW22QovLdVdayYzLd6tw/exec"
 
     }
 

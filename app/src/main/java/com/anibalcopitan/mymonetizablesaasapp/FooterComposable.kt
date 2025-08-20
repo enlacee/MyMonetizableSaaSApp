@@ -1,21 +1,18 @@
 package com.anibalcopitan.mymonetizablesaasapp
 
 import android.content.Intent
-import android.content.pm.PackageManager
+import android.net.Uri
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.sp
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import android.net.Uri
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
@@ -28,21 +25,24 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalInspectionMode
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.platform.LocalInspectionMode
-
+import androidx.compose.ui.unit.sp
 import com.anibalcopitan.mymonetizablesaasapp.data.phonenumberregistration.SharedPreferencesManager
 
 @Composable
@@ -65,11 +65,11 @@ fun HeaderTextComponent(modifier: Modifier = Modifier) {
     Spacer(modifier = Modifier.height(14.dp))
 
     Text(
-        text = "¡Si te Yapearón, ahora puedes reenviar tus notificaciones a otros celulares!",
+        text = "Listo para tu modelo de suscripción",
         fontSize = 16.sp,
         color = MaterialTheme.colorScheme.primary
     )
-//    Spacer(modifier = Modifier.height(4.dp))
+    Spacer(modifier = Modifier.height(4.dp))
     Text(
         text = "Si eres nuevo, 3 días de versión full",
         fontSize = 16.sp,
@@ -290,6 +290,20 @@ fun FooterButtonUnlockFullVersion(onClick: () -> Unit) {
         )
     }
 
+}
+
+@Composable
+fun CoinCentered() {
+    Box(
+        modifier = Modifier.fillMaxWidth(), // solo ancho
+        contentAlignment = Alignment.Center // centra horizontal
+    ) {
+        Image(
+            painter = painterResource(id = R.drawable.bitcoin),
+            contentDescription = "Bitcoin",
+            modifier = Modifier.size(100.dp)
+        )
+    }
 }
 
 @Preview(showBackground = true)

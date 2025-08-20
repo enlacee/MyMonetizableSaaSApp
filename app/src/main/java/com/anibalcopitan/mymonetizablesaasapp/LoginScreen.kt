@@ -118,6 +118,7 @@ fun LoginScreen() {
                 CircularProgressIndicator()
             } else {
                 ButtonLogin() {
+
                     if (formValidation(credentials, context)) {
                         isProcessing = true
                         val params: MutableMap<String?, String?> = HashMap()
@@ -248,8 +249,8 @@ fun LoginScreen() {
 * return void
 * */
 fun openDashboardActivity(context: Context){
-    context.startActivity(Intent(context, DashboardActivity::class.java))
-    (context as Activity).finish()
+    context.startActivity(Intent(context, DashboardActivity::class.java)) // abre una nueva activity
+    (context as Activity).finish() // cierra el actual activity *login*
 }
 
 data class Credentials(

@@ -49,10 +49,10 @@ fun DashboardScreen() {
     Column(modifier = Modifier.padding(16.dp)) {
         HeaderTextComponent()
         Spacer(modifier = Modifier.height(8.dp))
-
         inputHeaderText(sharedPreferencesManager)
         Spacer(modifier = Modifier.height(16.dp))
 
+        CoinCentered()
         FooterText()
         FooterButtonUnlockFullVersion({})
     }
